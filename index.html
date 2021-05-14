@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.js"></script>
+    <script src="client.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!--first name, last name, ID number, job title, annual salary-->
+
+    <header>S A L A R Y   C A L C U L T A T O R</header>
+
+    <h4>Employee Info</h4>
+
+    <section id = "form">
+        <div id = "inputJunction">
+            <input class = "input" type="text" placeholder = "First Name" id = "firstName">
+            <input class = "input" type="text" placeholder = "Last Name" id = "lastName">
+            <input class = "input" type="text" placeholder = "ID Number" id = "idNumber">
+            <input class = "input" type="text" placeholder = "Job Title" id = "jobTitle">
+            <input class = "input" type="text" placeholder = "Annual Salary" id = "annualSalary">
+        </div>
+        <button id = "submitButton">SUBMIT</button>
+    </section>
+
+
+
+    </section>
+
+    <main id = "salaryHut">
+        <table class="table table-success table-striped" id = "employeeTable">
+            <tbody>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>ID Number</th>
+                        <th>Job Title</th>
+                        <th>Annual Salary</th>
+                        <th>Monthly Cost</th>
+                    </tr>
+                    <tr id = "employeeData">
+
+                    </tr>
+                </thead>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>
