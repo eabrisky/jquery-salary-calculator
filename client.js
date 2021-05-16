@@ -5,49 +5,45 @@ function readyNow(){
     // C L I C K   L I S T E N E R S
 
     $('#submitButton').on('click', handleForm)
-    $('#deleteButton').on('click', handleDelete)
+    $('#bodyBody').on('click', '.deleteButton', handleDelete);
 } // end readyNow fn
 
 function handleForm(){
-    // let employeeStuff = $('.input').val();
-
-    // $('#employeeData').append(`
-    // <td>
-    //   ${employeeStuff};
-    // </td>
-    // `);
 
     let employee = {
         firstName: $('#firstName').val(),
         lastName: $('#lastName').val(),
         employeeID: $('#idNumber').val(),
         jobTitle: $('#jobTitle').val(),
-        annualSalary: $('#annualSalary').val()
-    };
+        annualSalary: $('#annualSalary').val(),
+        monthlyCost: $('#annualSalary').val() / 12
+    }; // end employee object
     
     console.log(employee);
 
-    $('#bodyBody').append(`<tr></tr>`)
-    $('#bodyBody').last().append(`<td>${employee.firstName}</td>`);
-    $('#bodyBody').last().append(`<td>${employee.lastName}</td>`);
-    $('#bodyBody').last().append(`<td>${employee.employeeID}</td>`);
-    $('#bodyBody').last().append(`<td>${employee.jobTitle}`);
-    $('#bodyBody').last().append(`<td>${employee.annualSalary}`);
+    $('#bodyBody').last().append(`
+        <tr class = "stuff">
+            <td class = "employeeInformation">${employee.firstName}</td>
+            <td class = "employeeInformation">${employee.lastName}</td>
+            <td class = "employeeInformation">${employee.employeeID}</td>
+            <td class = "employeeInformation">${employee.jobTitle}</td>
+            <td class = "employeeInformation">${employee.annualSalary}</td>
+            <td class = "employeeInformation">${employee.monthlyCost}</td>
+            <td class = "employeeInformation">
+                <button class ="deleteButton">DELETE</button>
+            </td>
+        </tr>
+    `); // end bodyBody appendage
 
-    $('#bodyBody').last().append(`<button>Delete</button>`)
-
-
-    // $('#subFirstName').append(employee.firstName)
-    // $('#subLastName').append(employee.lastName)
-    // $('#subID').append(employee.employeeID)
-    // $('#jobTitle').append(employee.jobTitle)
-    // $('#annualSalary').append(annualSalary)
+    $('.input').val('');
+    // clear input
 } // end handleForm fn
 
 function handleDelete(){
     // delete the row that was just made
-    
-}
+    console.log('we tryna delet or nah?');
+    $(this).closest('.stuff').remove();
+} // end handleDelete fn
 
 
 
@@ -63,7 +59,8 @@ function handleDelete(){
 // then populate the rest of your object
 // then push that object to empty array?
 
-let employees = [];
+// let employees = [];
+// end employees array
 
 // let employee = {
 //     firstName: $('#firstName').val(),
