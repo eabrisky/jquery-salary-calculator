@@ -28,5 +28,7 @@ h4 {
 }
 
 #totalMonthlyCost {
-    font-size: 3em;
+    font-size: 1.5em;
+    text-align: right;
+    padding: 1em;
 }

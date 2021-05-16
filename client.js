@@ -1,5 +1,7 @@
 $(document).ready(readyNow);
 
+// F U N C T I O N S
+
 function readyNow(){
 
     // C L I C K   L I S T E N E R S
@@ -19,7 +21,7 @@ function handleForm(){
         monthlyCost: $('#annualSalary').val() / 12
     }; // end employee object
     
-    console.log(employee);
+    // console.log(employee);
 
     $('#bodyBody').last().append(`
         <tr class = "stuff">
@@ -37,15 +39,24 @@ function handleForm(){
 
     $('.input').val('');
     // clear input
+    calculateTotalMonthly();
 } // end handleForm fn
 
 function handleDelete(){
     // delete the row that was just made
-    console.log('we tryna delet or nah?');
+    // console.log('we tryna delet or nah?');
     $(this).closest('.stuff').remove();
 } // end handleDelete fn
 
-
+function calculateTotalMonthly(){
+    // console.log('in calculateTotalMonthly');
+    let totalMonthly = [];
+    let employeeTotalCost = monthlyCost;
+    totalMonthly.push(employeeTotalCost);
+    console.log(monthlyCost);
+    // update the variable value 
+    $('#totalMonthlyCost').text(`Total Monthly Cost: ${totalMonthly}`);
+} // end calculateTotalMonthly fn
 
 // create an empty array
 // each employee is an object which will populate the array
