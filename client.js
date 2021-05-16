@@ -1,7 +1,11 @@
 $(document).ready(readyNow);
 
 function readyNow(){
+
+    // C L I C K   L I S T E N E R S
+
     $('#submitButton').on('click', handleForm)
+    $('#deleteButton').on('click', handleDelete)
 } // end readyNow fn
 
 function handleForm(){
@@ -23,7 +27,15 @@ function handleForm(){
     
     console.log(employee);
 
-    $('#employeeData').append(`<td>${employee.firstName}</td>`, `<td>${employee.lastName}</td>`, `<td>${employee.employeeID}</td>`)
+    $('#bodyBody').append(`<tr></tr>`)
+    $('#bodyBody').last().append(`<td>${employee.firstName}</td>`);
+    $('#bodyBody').last().append(`<td>${employee.lastName}</td>`);
+    $('#bodyBody').last().append(`<td>${employee.employeeID}</td>`);
+    $('#bodyBody').last().append(`<td>${employee.jobTitle}`);
+    $('#bodyBody').last().append(`<td>${employee.annualSalary}`);
+
+    $('#bodyBody').last().append(`<button>Delete</button>`)
+
 
     // $('#subFirstName').append(employee.firstName)
     // $('#subLastName').append(employee.lastName)
@@ -31,6 +43,11 @@ function handleForm(){
     // $('#jobTitle').append(employee.jobTitle)
     // $('#annualSalary').append(annualSalary)
 } // end handleForm fn
+
+function handleDelete(){
+    // delete the row that was just made
+    
+}
 
 
 

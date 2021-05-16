@@ -1,3 +1,28 @@
-header {
+.header {
     text-align: center;
+    font-size: 2.5em;
+    background-color: #B6C5B8;
+    color: #F5F5F5;
+    padding: 1em;
+    margin-bottom: 2em;
+    
+}
+
+#inputJunction {
+    margin-bottom: 1em;
+    margin-left: 1em;
+    text-align: center;
+    margin-top: 2em;
+}
+
+#centerThatButton {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5em;
+}
+
+h4 {
+    text-align: center;
+    font-size: 1em;
+    margin-top: 5em;
 }

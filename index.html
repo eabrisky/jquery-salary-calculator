@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="style.css">
     <script src="jquery.js"></script>
     <script src="client.js"></script>
-    <title>Document</title>
+    <title>jQuery-Salary-Calculator</title>
 </head>
 <body>
     <!--first name, last name, ID number, job title, annual salary-->
 
-    <header>S A L A R Y   C A L C U L T A T O R</header>
+    <header class = "header">S A L A R Y   C A L C U L T A T O R</header>
 
     <h4>Employee Info</h4>
 
@@ -26,7 +26,9 @@
             <input class = "input" type="text" placeholder = "Job Title" id = "jobTitle">
             <input class = "input" type="text" placeholder = "Annual Salary" id = "annualSalary">
         </div>
-        <button id = "submitButton">SUBMIT</button>
+        <div id = "centerThatButton">
+            <button id = "submitButton">SUBMIT</button>
+        </div>
     </section>
 
 
@@ -47,11 +49,12 @@
                     </tr>
                 </thead>
                 <tr class = "pushRow" id = "employeeData">
-                    <td id = "subFirstName"></td>
+                    <!-- <td id = "subFirstName"></td>
                     <td id = "subLastName"></td>
                     <td id = "subID"></td>
                     <td id = "jobTitle"></td>
                     <td id = "annualSalary"></td>
+                    <td id = "monthlyCost"></td> -->
                 </tr>
             </tbody>
         </table>
